@@ -1,0 +1,55 @@
+// Fonts and typography
+$font-base: "Satoshi", sans-serif;
+$font-sizes: (
+    // 16px -> 20px (Used for minor details, captions, or small footer links)
+    body-sm: clamp(
+            1.6rem,
+            calc(1.6rem + (2 - 1.6) * ((100vw - 32rem) / 112)),
+            2rem
+        ),
+    // 20px -> 24px (Standard body text size for paragraphs and general content)
+    body: clamp(2rem, calc(2rem + (2.4 - 2) * ((100vw - 32rem) / 112)), 2.4rem),
+    // 24px -> 32px (Ideal for navigation links or secondary headers)
+    heading: clamp(
+            2.4rem,
+            calc(2.4rem + (3.2 - 2.4) * ((100vw - 32rem) / 112)),
+            3.2rem
+        ),
+    // 32px -> 48px (For emphasized text, buttons, or subheadings that need to scale more)
+    title: clamp(
+            3.2rem,
+            calc(3.2rem + (4.8 - 3.2) * ((100vw - 32rem) / 112)),
+            4.8rem
+        ),
+    // 48px -> 64px (Large display text or hero sub-headers)
+    display-sm: clamp(
+            4.8rem,
+            calc(4.8rem + (6.4 - 4.8) * ((100vw - 32rem) / 112)),
+            6.4rem
+        ),
+    // 64px -> 80px (Main hero headers or extra-large typography)
+    display-lg: clamp(
+            6.4rem,
+            calc(6.4rem + (8 - 6.4) * ((100vw - 32rem) / 112)),
+            8rem
+        )
+);
+
+$font-weights: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+);
+
+// Colors
+$text-primary: #000000;
+$bg-primary: #ffffff;
+$bg-secondary: #f0eeed;
+$bg-hero: #f2f0f1;
+$second-primary: #00000066;
+$text-secondary: #00000099;
+$review-primary: #ffc633;
+$sales-primary: #ff3333;
+$bg-sales: #ff33331a;

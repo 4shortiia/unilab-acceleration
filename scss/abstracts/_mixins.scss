@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../abstracts/variables" as v;
+
+@mixin flex-center(
+    $direction: null,
+    $justify: null,
+    $align: null,
+    $text: null
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    text-align: $text;
+}
