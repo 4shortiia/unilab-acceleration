@@ -1,15 +1,17 @@
 @use "sass:map";
 @use "../abstracts/variables" as v;
 
-@mixin flex-center(
+@mixin flex(
     $direction: null,
     $justify: null,
     $align: null,
-    $text: null
+    $text: null,
+    $gap: null
 ) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     text-align: $text;
+    gap: $gap;
 }
