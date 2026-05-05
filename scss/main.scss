@@ -8,9 +8,10 @@
 
 // 3. Layout imports
 @use "./layout/header";
+@use "./layout/hero";
 @use "./layout/main";
 @use "./layout/footer";
 
 // 4. Components
+@use "./components/sign-up";
 @use "./components/burger-menu";
-@use "./components/hero";
