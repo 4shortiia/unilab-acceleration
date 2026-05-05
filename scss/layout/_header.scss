@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.header {
+    @include m.flex($align: center);
+    gap: 9.6rem;
+    margin-top: 2rem;
+}
+
+.burger-menu {
+    background-color: v.$bg-secondary;
+    @include m.flex($justify: flex-start, $align: center);
+    gap: 1.862rem;
+    margin-left: 1.6rem;
+}
+
+.right-panel {
+    @include m.flex($justify: flex-end, $align: center);
+    gap: 1.387rem;
+    margin-right: 1.6rem;
+}
