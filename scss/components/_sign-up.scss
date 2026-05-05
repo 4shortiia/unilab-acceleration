@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.sign-form {
+    background-color: v.$text-primary;
+    min-height: 3.4rem;
+    @include m.flex($justify: center, $align: center);
+
+    &__text {
+        color: v.$text-secondary;
+        font-weight: map.get(v.$font-weights, regular);
+        font-size: map.get(v.$font-sizes, body-xs);
+    }
+}
