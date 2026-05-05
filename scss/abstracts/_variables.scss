@@ -1,36 +1,48 @@
 // Fonts and typography
 $font-base: "Satoshi", sans-serif;
 $font-sizes: (
-    // 16px -> 20px (Used for minor details, captions, or small footer links)
+    // 12px -> 16px (Labels, legal fine print, or breadcrumbs)
+    body-xs: clamp(
+            1.2rem,
+            calc(1.2rem + (1.6 - 1.2) * ((100vw - 39rem) / 85)),
+            1.6rem
+        ),
+    // 14px -> 18px (Secondary labels, metadata, or dense UI elements)
+    body-md: clamp(
+            1.4rem,
+            calc(1.4rem + (1.8 - 1.4) * ((100vw - 39rem) / 85)),
+            1.8rem
+        ),
+    // 16px -> 20px (Minor details, captions, or small footer links)
     body-sm: clamp(
             1.6rem,
-            calc(1.6rem + (2 - 1.6) * ((100vw - 32rem) / 112)),
+            calc(1.6rem + (2 - 1.6) * ((100vw - 39rem) / 85)),
             2rem
         ),
-    // 20px -> 24px (Standard body text size for paragraphs and general content)
-    body: clamp(2rem, calc(2rem + (2.4 - 2) * ((100vw - 32rem) / 112)), 2.4rem),
-    // 24px -> 32px (Ideal for navigation links or secondary headers)
+    // 20px -> 24px (Standard body text for paragraphs and general content)
+    body: clamp(2rem, calc(2rem + (2.4 - 2) * ((100vw - 39rem) / 85)), 2.4rem),
+    // 24px -> 32px (Navigation links or secondary headers)
     heading: clamp(
             2.4rem,
-            calc(2.4rem + (3.2 - 2.4) * ((100vw - 32rem) / 112)),
+            calc(2.4rem + (3.2 - 2.4) * ((100vw - 39rem) / 85)),
             3.2rem
         ),
-    // 32px -> 48px (For emphasized text, buttons, or subheadings that need to scale more)
+    // 32px -> 48px (Emphasized text, buttons, or subheadings)
     title: clamp(
             3.2rem,
-            calc(3.2rem + (4.8 - 3.2) * ((100vw - 32rem) / 112)),
+            calc(3.2rem + (4.8 - 3.2) * ((100vw - 39rem) / 85)),
             4.8rem
         ),
     // 48px -> 64px (Large display text or hero sub-headers)
     display-sm: clamp(
             4.8rem,
-            calc(4.8rem + (6.4 - 4.8) * ((100vw - 32rem) / 112)),
+            calc(4.8rem + (6.4 - 4.8) * ((100vw - 39rem) / 85)),
             6.4rem
         ),
     // 64px -> 80px (Main hero headers or extra-large typography)
     display-lg: clamp(
             6.4rem,
-            calc(6.4rem + (8 - 6.4) * ((100vw - 32rem) / 112)),
+            calc(6.4rem + (8 - 6.4) * ((100vw - 39rem) / 85)),
             8rem
         )
 );
@@ -44,12 +56,14 @@ $font-weights: (
 );
 
 // Colors
-$text-primary: #000000;
-$bg-primary: #ffffff;
-$bg-secondary: #f0eeed;
+$text-primary: #ffffff;
+$text-secondary: #000000;
+$bg-primary: #000000;
+$bg-secondary: #ffffff;
+$p-primary: #00000099;
+// $bg-secondary: #f0eeed;
 $bg-hero: #f2f0f1;
 $second-primary: #00000066;
-$text-secondary: #00000099;
 $review-primary: #ffc633;
 $sales-primary: #ff3333;
 $bg-sales: #ff33331a;
