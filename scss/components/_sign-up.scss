@@ -3,12 +3,12 @@
 @use "sass:map";
 
 .sign-form {
-    background-color: v.$text-primary;
+    background-color: v.$bg-primary;
     min-height: 3.4rem;
     @include m.flex($justify: center, $align: center);
 
     &__text {
-        color: v.$text-secondary;
+        color: v.$text-primary;
         font-weight: map.get(v.$font-weights, regular);
         font-size: map.get(v.$font-sizes, body-xs);
     }
