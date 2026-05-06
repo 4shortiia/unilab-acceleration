@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.sellings {
+    &__title {
+        @include m.flex($justify: center, $align: center);
+    }
+    margin-top: 5rem;
+    font-size: map.get(v.$font-sizes, heading);
+    font-weight: map.get(v.$font-weights, bold);
+}
