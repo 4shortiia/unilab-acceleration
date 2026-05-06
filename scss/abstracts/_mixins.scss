@@ -15,3 +15,11 @@
     text-align: $text;
     gap: $gap;
 }
+
+@mixin horizontal-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
