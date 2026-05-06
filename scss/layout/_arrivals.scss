@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.arrivals {
+    &__title {
+        @include m.flex($justify: center, $align: center);
+    }
+    margin-top: 5rem;
+    font-size: map.get(v.$font-sizes, heading);
+    font-weight: map.get(v.$font-weights, bold);
+}
+
+.clothes-list {
+    margin-top: 3.2rem;
+    margin-left: 1.6rem;
+    @include m.flex($gap: 1.6rem);
+    @include m.horizontal-scroll;
+
+    &__clothes {
+        border-radius: 2rem;
+        width: 29.5rem;
+        height: 29.8rem;
+    }
+
+    &__caption {
+        font-size: map.get(v.$font-sizes, body-xs);
+        font-weight: map.get(v.$font-weights, bold);
+    }
+
+    &__review {
+        @include m.flex($justify: flex-start, $align: center, $gap: 0.44rem);
+        margin-top: 0.4rem;
+
+        figcaption {
+            font-size: map.get(v.$font-sizes, body-xs);
+            font-weight: map.get(v.$font-weights, regular);
+            margin-left: 1.1rem;
+
+            span {
+                color: v.$p-primary;
+            }
+        }
+    }
+}
+
+.clothes {
+    img {
+        width: 29.5rem;
+        height: 29.8rem;
+        border-radius: 2rem;
+    }
+}
+
+.price-category {
+    @include m.flex;
+}
+
+.price {
+    margin-top: 0.425rem;
+
+    &__del {
+        color: v.$second-primary;
+    }
+
+    &__sale {
+        font-size: map.get(v.$font-sizes, body-xs);
+        color: v.$sales-primary;
+        background-color: v.$bg-sales;
+        border-radius: 6.2rem;
+        width: 4.2rem;
+        height: 2rem;
+        @include m.flex($justify: center, $align: center);
+        margin-left: 0.5rem;
+        margin-top: 0.9rem;
+    }
+}
+
+.view-btn {
+    border: 0.1rem solid v.$bg-btn;
+    background-color: v.$bg-secondary;
+    border-radius: 6.2rem;
+    width: 35.8rem;
+    height: 4.6rem;
+    margin-top: 2.4rem;
+    margin-left: 1.6rem;
+}
+
+.line {
+    width: 35.8rem;
+    height: 0.1rem;
+    background-color: v.$bg-btn;
+    margin-top: 5.35rem;
+    margin-left: 1.6rem;
+}
