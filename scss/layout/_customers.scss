@@ -1,0 +1,176 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.customers {
+    margin: 0 1.6rem 5rem 1.6rem;
+    position: relative;
+
+    &__title {
+        margin: 5rem 0 2.4rem 0;
+        font-size: map.get(v.$font-sizes, "title");
+        font-weight: map.get(v.$font-weights, "bold");
+        text-align: left;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url(/assets/icons/arrow.svg);
+            top: 3.7rem;
+            left: 29rem;
+            transition: transform 0.2s ease;
+        }
+
+        &::after {
+            position: absolute;
+            content: url(/assets/icons/arrow-right.svg);
+            margin-left: 13rem;
+            transition: transform 0.2s ease;
+        }
+    }
+}
+
+.card {
+    width: 35.8rem;
+    flex-shrink: 0;
+}
+
+.cards-container {
+    @include m.horizontal-scroll;
+    display: flex;
+    gap: 2rem;
+}
+
+.desc {
+    border: 0.1rem solid v.$bg-btn;
+    border-radius: 2rem;
+    min-height: 21rem;
+    padding: 2.4rem;
+
+    &__name {
+        @include m.flex($gap: 0.578rem);
+        margin-top: 1.2rem;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        font-weight: map.get(v.$font-weights, "bold");
+    }
+
+    &__review {
+        color: v.$p-primary;
+        font-size: map.get(v.$font-sizes, "body-md");
+        font-weight: map.get(v.$font-weights, "regular");
+        margin-top: 1.15rem;
+        line-height: 2rem;
+    }
+}
+
+// @use "../abstracts/mixins" as m;
+// @use "../abstracts/variables" as v;
+// @use "sass:map";
+
+// .customers {
+//     margin: 0 1.6rem 5rem 1.6rem;
+//     position: relative;
+
+//     &__header {
+//         // ფოტოზე ისრები არის მარჯვნივ, სათაური მარცხნივ
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center; // ისრები და ტექსტი ერთ ხაზზე რომ დაჯდეს
+//         margin: 5rem 0 2.4rem 0;
+//     }
+
+//     &__title {
+//         font-size: map.get(v.$font-sizes, "title");
+//         font-weight: map.get(v.$font-weights, "bold");
+//         text-align: left;
+//         margin: 0;
+//     }
+// }
+
+// // ნავიგაციის ღილაკების სტილი (ნაცვლად ::before/::after-ისა)
+// .swiper-nav-buttons {
+//     display: flex;
+//     gap: 1.5rem;
+//     z-index: 10;
+
+//     button {
+//         background: transparent;
+//         border: none;
+//         cursor: pointer;
+//         padding: 0.5rem;
+//         transition:
+//             transform 0.2s ease,
+//             opacity 0.2s ease;
+
+//         &:hover {
+//             opacity: 0.6;
+//             transform: scale(1.1);
+//         }
+
+//         // Swiper ავტომატურად მართავს ამ კლასს
+//         &.swiper-button-disabled {
+//             opacity: 0.2;
+//             cursor: not-allowed;
+//             transform: scale(1);
+//         }
+
+//         img {
+//             width: 2.4rem;
+//             height: 2.4rem;
+//             display: block;
+//         }
+//     }
+// }
+
+// // სლაიდერის მთავარი კონტეინერი
+// .mySwiper {
+//     width: 100%;
+//     // აქ overflow: visible კარგია, თუ გინდა გვერდზე ქარდები ჩანდეს,
+//     // მაგრამ მშობელ სექციას (body/main) უნდა ჰქონდეს overflow-x: hidden
+//     overflow: hidden;
+//     position: relative;
+//     @include m.horizontal-scroll;
+//     display: flex;
+//     gap: 2rem;
+// }
+
+// // Swiper-ისთვის ეს კრიტიკულია!
+// .swiper-wrapper {
+//     // გათიშე horizontal-scroll მიქსინი აქ, რადგან Swiper თავად მართავს სქროლს
+//     display: flex !important;
+//     gap: 0; // Swiper-ში დაშორებას spaceBetween-ით ვარეგულირებთ JS-ში
+// }
+
+// .card.swiper-slide {
+//     width: 35.8rem; // შენი ქარდის ზომა
+//     flex-shrink: 0;
+//     height: auto;
+// }
+
+// .desc {
+//     border: 0.1rem solid v.$bg-btn;
+//     border-radius: 2rem;
+//     min-height: 21rem;
+//     padding: 2.4rem;
+//     height: 100%;
+
+//     &__name {
+//         @include m.flex($gap: 0.578rem);
+//         margin-top: 1.2rem;
+//         font-size: map.get(v.$font-sizes, "body-sm");
+//         font-weight: map.get(v.$font-weights, "bold");
+//     }
+
+//     &__review {
+//         color: v.$p-primary;
+//         font-size: map.get(v.$font-sizes, "body-md");
+//         font-weight: map.get(v.$font-weights, "regular");
+//         margin-top: 1.15rem;
+//         line-height: 2rem;
+//     }
+// }
+
+// .stars {
+//     @include m.flex($gap: 0.6rem);
+//     margin-bottom: 1.2rem;
+// }

@@ -1,0 +1,45 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.header {
+    &__burger-menu {
+        background-color: v.$bg-secondary;
+        @include m.flex($justify: flex-start, $align: center, $gap: 1.862rem);
+        margin-left: 1.6rem;
+        cursor: pointer;
+
+        @media (min-width: 1440px) {
+            .burger-menu {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                width: 16rem;
+                height: 2.2rem;
+            }
+        }
+    }
+
+    &__right-panel {
+        @include m.flex($align: center, $gap: 4rem);
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+
+    &__right-wrapper {
+        @include m.flex($align: center, $gap: 1.387rem);
+
+        @media (min-width: 991px) {
+            img:nth-child(1) {
+                width: 2.213rem;
+                height: 2.025rem;
+            }
+
+            img:nth-child(2) {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+        }
+    }
+}

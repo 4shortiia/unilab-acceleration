@@ -61,6 +61,7 @@ $text-secondary: #000000;
 $bg-primary: #000000;
 $bg-secondary: #ffffff;
 $p-primary: #00000099;
+$bg-clothes: #f0f0f0;
 // $bg-secondary: #f0eeed;
 $bg-hero: #f2f0f1;
 $second-primary: #00000066;
@@ -68,3 +69,12 @@ $review-primary: #ffc633;
 $sales-primary: #ff3333;
 $bg-sales: #ff33331a;
 $bg-btn: #0000001a;
+
+// Banner Text
+
+$banners: (
+    "casual": "Casual",
+    "formal": "Formal",
+    "vintage": "Party",
+    "sport": "Gym",
+);

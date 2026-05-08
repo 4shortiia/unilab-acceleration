@@ -5,6 +5,11 @@
 .sellings {
     &__title {
         @include m.flex($justify: center, $align: center);
+
+        @media (min-width: 1440px) {
+            font-size: 6rem;
+            margin-bottom: 5.5rem;
+        }
     }
     margin-top: 5rem;
     font-size: map.get(v.$font-sizes, heading);

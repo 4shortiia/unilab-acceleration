@@ -7,25 +7,41 @@
         @include m.flex($justify: center, $align: center);
     }
     margin-top: 5rem;
-    font-size: map.get(v.$font-sizes, heading);
-    font-weight: map.get(v.$font-weights, bold);
+    font-size: map.get(v.$font-sizes, "heading");
+    font-weight: map.get(v.$font-weights, "bold");
+
+    @media (min-width: 1440px) {
+        margin-top: 7.2rem;
+        font-size: 4.8rem;
+    }
 }
 
 .clothes-list {
     margin-top: 3.2rem;
     margin-left: 1.6rem;
+    margin-right: 1.6rem;
     @include m.flex($gap: 1.6rem);
     @include m.horizontal-scroll;
+
+    @media (min-width: 1440px) {
+        @include m.flex($justify: center, $gap: 2rem);
+    }
 
     &__clothes {
         border-radius: 2rem;
         width: 29.5rem;
         height: 29.8rem;
+        cursor: pointer;
     }
 
     &__caption {
-        font-size: map.get(v.$font-sizes, body-xs);
-        font-weight: map.get(v.$font-weights, bold);
+        font-size: map.get(v.$font-sizes, "body-xs");
+        font-weight: map.get(v.$font-weights, "bold");
+
+        @media (min-width: 1440px) {
+            font-size: 2rem;
+            margin-top: 1.6rem;
+        }
     }
 
     &__review {
@@ -45,6 +61,7 @@
 }
 
 .clothes {
+    cursor: pointer;
     img {
         width: 29.5rem;
         height: 29.8rem;
@@ -58,6 +75,10 @@
 
 .price {
     margin-top: 0.425rem;
+
+    @media (min-width: 1440px) {
+        font-size: 2.4rem;
+    }
 
     &__del {
         color: v.$second-primary;
@@ -73,6 +94,13 @@
         @include m.flex($justify: center, $align: center);
         margin-left: 0.5rem;
         margin-top: 0.9rem;
+
+        @media (min-width: 1440px) {
+            width: 5.8rem;
+            height: 2.8rem;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+        }
     }
 }
 
@@ -84,6 +112,17 @@
     height: 4.6rem;
     margin-top: 2.4rem;
     margin-left: 1.6rem;
+    display: block;
+    cursor: pointer;
+
+    @media (min-width: 1440px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 21.8rem;
+        height: 5.2rem;
+        margin-top: 3.6rem;
+        font-size: map.get(v.$font-sizes, body-sm);
+    }
 }
 
 .line {
@@ -92,4 +131,11 @@
     background-color: v.$bg-btn;
     margin-top: 5.35rem;
     margin-left: 1.6rem;
+    display: inline-block;
+
+    @media (min-width: 1440px) {
+        min-height: 0.1rem;
+        width: 124rem;
+        margin: 6.4rem 10rem 0 10rem;
+    }
 }

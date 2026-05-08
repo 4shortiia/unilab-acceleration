@@ -3,19 +3,105 @@
 @use "sass:map";
 
 .header {
-    @include m.flex($align: center);
-    gap: 9.6rem;
+    @include m.flex($align: center, $justify: space-between);
     margin-top: 2.3rem;
     margin-bottom: 2.3rem;
 
-    &__burger-menu {
-        background-color: v.$bg-secondary;
-        @include m.flex($justify: flex-start, $align: center, $gap: 1.862rem);
-        margin-left: 1.6rem;
+    @media (min-width: 1440px) {
+        margin: 2.4rem 8rem;
+    }
+}
+
+nav {
+    display: none;
+}
+
+.search-bar {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    nav {
+        display: block;
+        margin-right: auto;
+
+        .nav-list {
+            @include m.flex($gap: 2.4rem);
+            font-size: map.get(v.$font-sizes, "body-xs");
+            margin-left: 4rem;
+
+            a {
+                color: v.$text-secondary;
+            }
+        }
+
+        .shop-details {
+            position: relative;
+
+            summary {
+                @include m.flex($align: center, $gap: 0.5rem);
+                cursor: pointer;
+                outline: none;
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: v.$bg-secondary;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+                border-radius: 1rem;
+                min-width: 15rem;
+                z-index: 100;
+                list-style: none;
+
+                li {
+                    margin-bottom: 1rem;
+                    a {
+                        text-decoration: none;
+                        color: v.$text-secondary;
+                    }
+                }
+            }
+
+            &[open] .arrow {
+                transform: rotate(180deg);
+            }
+        }
     }
 
-    &__right-panel {
-        @include m.flex($justify: flex-end, $align: center, $gap: 1.387rem);
-        margin-right: 1.6rem;
+    .search-container {
+        @include m.flex($align: center, $gap: 1.2rem);
+        background-color: v.$bg-clothes;
+        padding: 1.2rem 1.6rem;
+        border-radius: 6.2rem;
+        width: 57.7rem;
+
+        .search-icon {
+            width: 2rem;
+            height: 2rem;
+            opacity: 0.5;
+            flex-shrink: 0;
+        }
+
+        .search-bar {
+            display: block;
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+
+            font-size: map.get(v.$font-sizes, "body-xs");
+            color: v.$text-secondary;
+
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.4);
+            }
+        }
     }
 }
