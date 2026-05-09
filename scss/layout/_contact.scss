@@ -37,6 +37,7 @@
         @include m.flex($direction: column);
         padding-bottom: 2.8rem;
         margin: 0 2.4rem;
+        color: v.$text-secondary;
 
         @media (min-width: 991px) {
             padding-top: 4.3rem;
