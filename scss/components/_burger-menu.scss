@@ -17,14 +17,19 @@
             img:nth-child(2) {
                 width: 16rem;
                 height: 2.2rem;
+                z-index: 0;
             }
         }
     }
 
     &__right-panel {
-        @include m.flex($align: center, $gap: 4rem);
+        @include m.flex($align: center, $gap: 1.2rem);
         margin-right: 2rem;
         cursor: pointer;
+
+        @media (min-width: 991px) {
+            gap: 4rem;
+        }
     }
 
     &__right-wrapper {
@@ -34,12 +39,156 @@
             img:nth-child(1) {
                 width: 2.213rem;
                 height: 2.025rem;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                }
             }
 
             img:nth-child(2) {
                 width: 2.25rem;
                 height: 2.25rem;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                }
             }
         }
     }
+}
+
+.logo-icon {
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: v.$bg-secondary;
+    z-index: 999999;
+    transition: left 0.4s ease-in-out;
+    padding: 8rem 2rem 4rem 2.5rem;
+    @include m.flex($direction: column);
+}
+
+#nav-toggle:checked ~ .nav {
+    left: 0;
+}
+
+#nav-toggle:checked ~ .nav-burger .close-icon {
+    display: block;
+    position: fixed;
+    top: 2.2rem;
+    left: 2.2rem;
+    z-index: 1000000;
+    width: 2.2rem;
+}
+
+#nav-toggle:checked ~ .signup-btn {
+    display: block;
+    z-index: 99;
+}
+
+#nav-toggle:checked ~ .nav-burger .burger-menu {
+    visibility: hidden;
+}
+
+.nav__burger-menu li {
+    margin-bottom: 3rem;
+}
+
+.nav-link,
+.details summary {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: v.$burger-menu;
+    @include m.flex($gap: 2rem, $align: center);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: darken(v.$burger-menu, 20%);
+        padding-left: 0.5rem;
+    }
+
+    &:active {
+        color: lighten(v.$burger-menu, 10%);
+    }
+
+    &:focus {
+        outline: none;
+        color: darken(v.$burger-menu, 30%);
+    }
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+
+    li a {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.6rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: #000000;
+            padding-left: 0.5rem;
+        }
+
+        &:active {
+            color: rgba(0, 0, 0, 0.8);
+            transform: scale(0.98);
+        }
+    }
+}
+
+.arrow {
+    width: 1.4rem;
+    transition: 0.3s;
+}
+
+.shop-details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.signup-btn {
+    display: block;
+    width: 16.5rem;
+    height: 5.2rem;
+    background-color: v.$bg-primary;
+    color: v.$text-primary;
+    border: none;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 4rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: v.$bg-secondary;
+        color: v.$text-secondary;
+    }
+}
+
+.close-icon {
+    display: none;
 }

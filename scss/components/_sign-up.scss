@@ -7,9 +7,25 @@
     min-height: 3.4rem;
     @include m.flex($justify: center, $align: center);
 
+    @media (min-width: 991px) {
+        min-height: 3.8rem;
+    }
+
     &__text {
         color: v.$text-primary;
         font-weight: map.get(v.$font-weights, regular);
         font-size: map.get(v.$font-sizes, body-xs);
+        opacity: 0.8;
+        position: relative;
+
+        @media (min-width: 991px) {
+            font-size: map.get(v.$font-sizes, body-sm);
+            &::after {
+                content: "";
+                background-image: url(/assets/icons/exit.svg);
+                position: absolute;
+                z-index: 9;
+            }
+        }
     }
 }
