@@ -396,7 +396,7 @@ nav {
   .banner-desktop::before, .banner-desktop::after {
     content: "";
     position: absolute;
-    background-image: url("./assets/img/sparkle-small.svg");
+    background-image: url("../assets/img/sparkle-small.svg");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
@@ -788,7 +788,7 @@ nav {
 }
 .customers__title::before {
   position: absolute;
-  content: url("./assets/icons/arrow.svg");
+  content: url("../assets/icons/arrow.svg");
   top: 3.7rem;
   left: 29rem;
   transition: transform 0.2s ease;
@@ -804,7 +804,7 @@ nav {
 }
 .customers__title::after {
   position: absolute;
-  content: url("./assets/icons/arrow-right.svg");
+  content: url("../assets/icons/arrow-right.svg");
   margin-left: 13rem;
   transition: transform 0.2s ease;
   cursor: pointer;
