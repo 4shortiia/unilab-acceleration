@@ -1,6 +1,8 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 @use "sass:map";
+@use "sass:color";
+@use "sass:list";
 
 .footer {
     background-color: v.$bg-clothes;

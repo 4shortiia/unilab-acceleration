@@ -1,6 +1,8 @@
+@use "sass:list";
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 @use "sass:map";
+@use "sass:color";
 
 .hero {
     background-color: v.$bg-hero;
@@ -233,7 +235,7 @@
 
             @for $i from 1 through 5 {
                 img:nth-child(5n + #{$i}) {
-                    width: nth($widths, $i);
+                    width: list.nth($widths, $i);
                 }
             }
         }

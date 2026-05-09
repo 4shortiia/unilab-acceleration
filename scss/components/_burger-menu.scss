@@ -1,6 +1,8 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 @use "sass:map";
+@use "sass:color";
+@use "sass:list";
 
 .header {
     &__burger-menu {
@@ -130,17 +132,17 @@
     transition: 0.2s ease-in;
 
     &:hover {
-        color: darken(v.$burger-menu, 20%);
+        color: color.adjust(v.$burger-menu, $lightness: -20%);
         padding-left: 0.5rem;
     }
 
     &:active {
-        color: lighten(v.$burger-menu, 10%);
+        color: color.adjust(v.$burger-menu, $lightness: 10%);
     }
 
     &:focus {
         outline: none;
-        color: darken(v.$burger-menu, 30%);
+        color: color.adjust(v.$burger-menu, $lightness: -20%);
     }
 }
 

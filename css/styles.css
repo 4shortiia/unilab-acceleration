@@ -1442,7 +1442,7 @@ nav {
 .nav-link:focus,
 .details summary:focus {
   outline: none;
-  color: rgb(64.5, 64.5, 64.5);
+  color: #5a5a5a;
 }
 
 .dropdown-menu {

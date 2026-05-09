@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 @use "sass:map";
+@use "sass:color";
 
 html {
     scroll-behavior: smooth;
