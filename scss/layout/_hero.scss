@@ -53,6 +53,15 @@
         width: 35.8rem;
         height: 5.2rem;
         margin: 2.4rem 1.6rem 2.2rem 1.6rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: v.$bg-secondary;
+            color: v.$text-secondary;
+            transform: scale(1.09);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
 
         @media (min-width: 1440px) {
             width: 21rem;

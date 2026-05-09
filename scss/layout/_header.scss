@@ -29,7 +29,14 @@ nav {
             @include m.flex($gap: 2.4rem);
             font-size: map.get(v.$font-sizes, "body-xs");
             margin-left: 4rem;
+            > li:not(:has(.shop-details)) {
+                transition: transform 0.3s ease;
+                will-change: transform;
 
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
             a {
                 color: v.$text-secondary;
             }
@@ -63,7 +70,6 @@ nav {
                 li {
                     margin-bottom: 1rem;
                     a {
-                        text-decoration: none;
                         color: v.$text-secondary;
                     }
                 }
@@ -81,6 +87,12 @@ nav {
         padding: 1.2rem 1.6rem;
         border-radius: 6.2rem;
         width: 57.7rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
 
         .search-icon {
             width: 2rem;
@@ -104,4 +116,14 @@ nav {
             }
         }
     }
+}
+
+@media (min-width: 991px) {
+    .nav {
+        display: none;
+    }
+}
+
+.search-container {
+    @include m.flex($align: center, $gap: 1.2rem);
 }

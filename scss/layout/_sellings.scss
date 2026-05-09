@@ -3,6 +3,9 @@
 @use "sass:map";
 
 .sellings {
+    @media (min-width: 1440px) {
+        padding: 0 10rem;
+    }
     &__title {
         @include m.flex($justify: center, $align: center);
 
@@ -12,6 +15,6 @@
         }
     }
     margin-top: 5rem;
-    font-size: map.get(v.$font-sizes, heading);
-    font-weight: map.get(v.$font-weights, bold);
+    font-size: map.get(v.$font-sizes, "body");
+    font-weight: map.get(v.$font-weights, "bold");
 }
