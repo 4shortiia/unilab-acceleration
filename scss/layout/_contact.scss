@@ -82,9 +82,7 @@
 
 @media (min-width: 991px) {
     .wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: 21.2rem;
+        @include m.flex($direction: row, $gap: 21.2rem);
     }
 }
 

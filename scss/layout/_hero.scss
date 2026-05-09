@@ -255,7 +255,7 @@
         &::after {
             content: "";
             position: absolute;
-            background-image: url("/assets/img/sparkle-small.svg");
+            background-image: url("./assets/img/sparkle-small.svg");
             background-size: contain;
             background-repeat: no-repeat;
             z-index: 2;
