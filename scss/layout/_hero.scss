@@ -84,6 +84,7 @@
         z-index: 3;
         padding-bottom: 9rem;
         padding-top: 3rem;
+        width: 100%;
 
         &__item {
             position: relative;
@@ -171,6 +172,7 @@
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
+        margin-top: -2.8rem;
     }
 
     &__logos {
