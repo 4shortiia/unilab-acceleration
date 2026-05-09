@@ -127,7 +127,7 @@
     color: v.$burger-menu;
     @include m.flex($gap: 2rem, $align: center);
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: 0.2s ease-in;
 
     &:hover {
         color: darken(v.$burger-menu, 20%);

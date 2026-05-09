@@ -145,11 +145,16 @@
         background-repeat: no-repeat;
         z-index: 2;
         pointer-events: none;
+        cursor: pointer;
+
+        will-change: transform;
+        transition: transform 0.4s ease;
     }
 
     &::before {
         top: 13.7rem;
         left: 2.7rem;
+        animation: sparkleFloat1 3s ease-in-out infinite;
     }
 
     &::after {
@@ -157,6 +162,15 @@
         height: 7.6rem;
         top: 4rem;
         right: 2.1rem;
+        animation: sparkleFloat2 4s ease-in-out infinite;
+    }
+
+    &:hover::before {
+        transform: scale(1.25) rotate(12deg);
+    }
+
+    &:hover::after {
+        transform: scale(1.15) rotate(-12deg);
     }
 }
 
@@ -171,7 +185,6 @@
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
-        margin-top: -2.8rem;
     }
 
     &__logos {
@@ -261,6 +274,7 @@
             background-repeat: no-repeat;
             z-index: 2;
             pointer-events: none;
+            cursor: pointer;
         }
 
         &::before {
@@ -269,6 +283,8 @@
             top: 50%;
             left: 20rem;
             transform: translateY(-50%);
+            animation: sparkleFloat1 5s cubic-bezier(0.45, 0.05, 0.55, 0.95)
+                infinite;
         }
 
         &::after {
@@ -276,6 +292,40 @@
             height: 10.4rem;
             top: 8rem;
             right: 6rem;
+            animation: sparkleFloat2 6s cubic-bezier(0.45, 0.05, 0.55, 0.95)
+                infinite;
         }
+
+        &:hover::before {
+            transform: scale(1.25) rotate(12deg);
+        }
+
+        &:hover::after {
+            transform: scale(1.15) rotate(-12deg);
+        }
+    }
+}
+
+@keyframes sparkleFloat1 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-14px) rotate(8deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes sparkleFloat2 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(14px) rotate(-8deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
     }
 }

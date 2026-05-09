@@ -82,11 +82,11 @@ nav {
     gap: 0.5rem;
     cursor: pointer;
     outline: none;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
   nav .shop-details summary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
   nav .shop-details summary::-webkit-details-marker {
     display: none;
@@ -101,13 +101,27 @@ nav {
     border-radius: 1rem;
     min-width: 15rem;
     z-index: 100;
-    list-style: none;
   }
   nav .shop-details .dropdown-menu li {
     margin-bottom: 1rem;
   }
   nav .shop-details .dropdown-menu li a {
     color: #000000;
+    transition: opacity 0.2s ease;
+  }
+  nav .shop-details .dropdown-menu li a:hover {
+    color: #000000;
+    padding-left: 0.5rem;
+  }
+  nav .shop-details .dropdown-menu li a:active {
+    color: rgba(0, 0, 0, 0.8);
+    transform: scale(0.98);
+  }
+  nav .shop-details .shop-details[open] .dropdown-menu {
+    max-height: 30rem;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1.5rem;
   }
   nav .shop-details[open] .arrow {
     transform: rotate(180deg);
@@ -297,16 +311,27 @@ nav {
   background-repeat: no-repeat;
   z-index: 2;
   pointer-events: none;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.4s ease;
 }
 .hero-banner::before {
   top: 13.7rem;
   left: 2.7rem;
+  animation: sparkleFloat1 3s ease-in-out infinite;
 }
 .hero-banner::after {
   width: 7.6rem;
   height: 7.6rem;
   top: 4rem;
   right: 2.1rem;
+  animation: sparkleFloat2 4s ease-in-out infinite;
+}
+.hero-banner:hover::before {
+  transform: scale(1.25) rotate(12deg);
+}
+.hero-banner:hover::after {
+  transform: scale(1.15) rotate(-12deg);
 }
 
 .brands {
@@ -321,7 +346,6 @@ nav {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    margin-top: -2.8rem;
   }
 }
 .brands__logos {
@@ -417,6 +441,7 @@ nav {
     background-repeat: no-repeat;
     z-index: 2;
     pointer-events: none;
+    cursor: pointer;
   }
   .banner-desktop::before {
     width: 5.6rem;
@@ -424,15 +449,45 @@ nav {
     top: 50%;
     left: 20rem;
     transform: translateY(-50%);
+    animation: sparkleFloat1 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
   }
   .banner-desktop::after {
     width: 10.4rem;
     height: 10.4rem;
     top: 8rem;
     right: 6rem;
+    animation: sparkleFloat2 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  }
+  .banner-desktop:hover::before {
+    transform: scale(1.25) rotate(12deg);
+  }
+  .banner-desktop:hover::after {
+    transform: scale(1.15) rotate(-12deg);
   }
 }
 
+@keyframes sparkleFloat1 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes sparkleFloat2 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-8deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
 @media (min-width: 1440px) {
   .arrivals {
     padding: 0 10rem;
@@ -1335,7 +1390,7 @@ nav {
   align-items: center;
   gap: 2rem;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: 0.2s ease-in;
 }
 .nav-link:hover,
 .details summary:hover {
