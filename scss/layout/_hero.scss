@@ -26,6 +26,7 @@
             font-size: map.get(v.$font-sizes, "display-sm");
             font-weight: map.get(v.$font-weights, "black");
             z-index: 3;
+            line-height: 1.1;
         }
     }
 
