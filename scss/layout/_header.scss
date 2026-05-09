@@ -88,7 +88,7 @@ nav {
         border-radius: 6.2rem;
         width: 57.7rem;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: 0.3s ease-in-out;
         &:hover {
             transform: scale(1.05);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);

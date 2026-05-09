@@ -30,7 +30,7 @@
     height: 2rem;
     @include m.flex($justify: center, $align: center);
     margin-left: 0.5rem;
-    margin-top: 0.7rem;
+    margin-top: 0.9rem;
 
     @media (min-width: 1440px) {
         width: 5.8rem;

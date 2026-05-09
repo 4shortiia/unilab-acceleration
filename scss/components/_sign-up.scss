@@ -5,6 +5,7 @@
 .sign-form {
     background-color: v.$bg-primary;
     min-height: 3.4rem;
+    position: relative;
     @include m.flex($justify: center, $align: center);
 
     @media (min-width: 991px) {
@@ -20,12 +21,23 @@
 
         @media (min-width: 991px) {
             font-size: map.get(v.$font-sizes, body-sm);
-            &::after {
-                content: "";
-                background-image: url(/assets/icons/exit.svg);
-                position: absolute;
-                z-index: 9;
-            }
         }
+    }
+}
+
+.form-img {
+    display: none;
+    cursor: pointer;
+}
+
+@media (min-width: 991px) {
+    .form-img {
+        @include m.flex;
+        position: absolute;
+        right: 10rem;
+        top: 50%;
+        transform: translateY(-50%);
+        filter: invert(100%);
+        opacity: 0.8;
     }
 }

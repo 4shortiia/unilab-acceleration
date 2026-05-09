@@ -5,7 +5,10 @@
 .subscribe {
     background-color: v.$bg-primary;
     margin: 0 1.6rem;
+    position: relative;
+    z-index: 2;
     border-radius: 2rem;
+    background: linear-gradient(to bottom, v.$bg-primary 50%, #f0f0f0 50%);
 
     @media (min-width: 991px) {
         margin: 0 10rem;
@@ -46,7 +49,7 @@
             font-size: map.get(v.$font-sizes, "body-md");
             font-weight: map.get(v.$font-weights, "medium");
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s ease-in-out;
 
             &:hover {
                 transform: scale(1.09);
@@ -80,15 +83,21 @@
     }
 }
 
+.wrapper {
+    background-color: #000; // პირდაპირ ფერი ჩავწეროთ ტესტისთვის
+    border-radius: 2rem;
+}
+
 @media (min-width: 991px) {
     .wrapper {
         @include m.flex($direction: row, $gap: 21.2rem);
+        padding: 0 6.4rem;
     }
 }
 
 .submit-btn {
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease-in-out;
 
     &:hover {
         background-color: v.$bg-primary;
