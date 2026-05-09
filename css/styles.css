@@ -82,6 +82,11 @@ nav {
     gap: 0.5rem;
     cursor: pointer;
     outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  nav .shop-details summary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
   }
   nav .shop-details summary::-webkit-details-marker {
     display: none;
@@ -1216,10 +1221,11 @@ nav {
   .header__burger-menu .burger-menu {
     display: none;
   }
-  .header__burger-menu img:nth-child(2) {
+  .header__burger-menu .logo-icon {
     width: 16rem;
     height: 2.2rem;
     z-index: 0;
+    display: block;
   }
 }
 .header__right-panel {
@@ -1249,23 +1255,24 @@ nav {
     transform: scale(1.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
-  .header__right-wrapper img:nth-child(2) {
+  .header__right-wrapper .logo-icon {
     width: 2.25rem;
     height: 2.25rem;
     transition: opacity 0.3s ease;
   }
-  .header__right-wrapper img:nth-child(2):hover {
+  .header__right-wrapper .logo-icon:hover {
     transform: scale(1.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 }
 
 .logo-icon {
-  transition: opacity 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .logo-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
 }
 
 .nav-toggle {
@@ -1287,12 +1294,18 @@ nav {
   overflow-y: auto;
 }
 
+.burger-menu {
+  cursor: pointer;
+}
+
 #nav-toggle:checked ~ .nav {
   left: 0;
 }
 
-#nav-toggle:checked ~ .nav-burger .close-icon {
-  display: block;
+#nav-toggle:checked ~ .header__burger-menu .nav-burger .close-icon {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   position: fixed;
   top: 2.2rem;
   left: 2.2rem;
@@ -1305,7 +1318,7 @@ nav {
   z-index: 99;
 }
 
-#nav-toggle:checked ~ .nav-burger .burger-menu {
+#nav-toggle:checked ~ .header .nav-burger .burger-menu {
   visibility: hidden;
 }
 
@@ -1391,7 +1404,11 @@ nav {
 }
 
 .close-icon {
-  display: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -49,6 +49,12 @@ nav {
                 @include m.flex($align: center, $gap: 0.5rem);
                 cursor: pointer;
                 outline: none;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+                }
 
                 &::-webkit-details-marker {
                     display: none;

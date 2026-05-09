@@ -14,10 +14,11 @@
                 display: none;
             }
 
-            img:nth-child(2) {
+            .logo-icon {
                 width: 16rem;
                 height: 2.2rem;
                 z-index: 0;
+                display: block;
             }
         }
     }
@@ -46,7 +47,7 @@
                 }
             }
 
-            img:nth-child(2) {
+            .logo-icon {
                 width: 2.25rem;
                 height: 2.25rem;
                 transition: opacity 0.3s ease;
@@ -60,10 +61,12 @@
 }
 
 .logo-icon {
-    transition: opacity 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
     &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -85,13 +88,18 @@
 
     overflow-y: auto;
 }
+.burger-menu {
+    cursor: pointer;
+}
 
 #nav-toggle:checked ~ .nav {
     left: 0;
 }
 
-#nav-toggle:checked ~ .nav-burger .close-icon {
-    display: block;
+#nav-toggle:checked ~ .header__burger-menu .nav-burger .close-icon {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     position: fixed;
     top: 2.2rem;
     left: 2.2rem;
@@ -104,7 +112,7 @@
     z-index: 99;
 }
 
-#nav-toggle:checked ~ .nav-burger .burger-menu {
+#nav-toggle:checked ~ .header .nav-burger .burger-menu {
     visibility: hidden;
 }
 
@@ -192,5 +200,9 @@
 }
 
 .close-icon {
-    display: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
 }

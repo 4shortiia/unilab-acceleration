@@ -2,8 +2,6 @@
 @use "../abstracts/variables" as v;
 @use "sass:map";
 
-// @import url("fonts/IntegralCF-Bold.woff");
-
 .hero {
     background-color: v.$bg-hero;
     min-height: 85.3rem;
