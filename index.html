@@ -21,16 +21,63 @@
     <ins>Sign Up Now</ins>
    </p>
   </aside>
+  <!-- მობილური მენიუს ფონი (overlay) -->
+
   <header>
    <article class="header">
-    <figure class="header__burger-menu">
-     <img
-      src="./assets/icons/burger-menu.svg"
-      alt="Burger Menu Icon"
-      class="burger-menu"
-     />
-     <img src="./assets/icons/SHOP.CO.svg" alt="Logo" />
-    </figure>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+
+    <label for="nav-toggle" class="nav-burger">
+     <figure class="header__burger-menu">
+      <img
+       src="./assets/icons/burger-menu.svg"
+       alt="Burger Menu Icon"
+       class="burger-menu"
+      />
+      <img src="./assets/icons/exit.svg" alt="Close Menu" class="close-icon" />
+      <img src="./assets/icons/SHOP.CO.svg" alt="Logo" class="logo-icon" />
+     </figure>
+    </label>
+
+    <nav class="nav">
+     <ul class="nav__burger-menu">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#" class="nav-link">About</a></li>
+      <li>
+       <details class="details">
+        <summary>
+         Services
+         <img src="./assets/icons/arrow-down.svg" alt="Arrow" class="arrow" />
+        </summary>
+
+        <ul class="dropdown-menu">
+         <li><a href="#">Privacy Policy</a></li>
+         <li><a href="#">About Company</a></li>
+         <li><a href="#">Payment Gateway</a></li>
+         <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+       </details>
+      </li>
+      <li>
+       <details class="details">
+        <summary>
+         Shop
+         <img src="./assets/icons/arrow-down.svg" alt="Arrow" class="arrow" />
+        </summary>
+
+        <ul class="dropdown-menu">
+         <li><a href="#">Privacy Policy</a></li>
+         <li><a href="#">About Company</a></li>
+         <li><a href="#">Payment Gateway</a></li>
+         <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+       </details>
+      </li>
+      <li><a href="#" class="nav-link">Testimonials</a></li>
+     </ul>
+     <button class="signup-btn">Sign Up Now</button>
+    </nav>
+
     <nav>
      <ul class="nav-list">
       <li>
@@ -174,7 +221,7 @@
       </div>
      </article>
      <article>
-      <figure>
+      <figure class="clothes">
        <img
         src="./assets/img/shirt.svg"
         alt="Shirt"
@@ -207,7 +254,91 @@
        <img src="./assets/icons/half-star.svg" alt="Star Icon" />
        <figcaption>4.5/<span>5</span></figcaption>
       </figure>
+      <div class="price-category">
+       <p class="price">
+        $130
+        <span class="price__del"><del>$160</del></span>
+       </p>
+       <p class="price__sale">-30%</p>
+      </div>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img
+        src="./assets/img/tshirt.svg"
+        alt="Tshirt"
+        class="clothes-list__clothes"
+       />
+       <figcaption class="clothes-list__caption">
+        T-SHIRT WITH TAPE DETAILS
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/half-star.svg" alt="Star Icon" />
+       <figcaption>4.5/<span>5</span></figcaption>
+      </figure>
+      <p class="price">$120</p>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img src="./assets/img/jeans.svg" alt="Jeans" />
+       <figcaption class="clothes-list__caption">SKINNY FIT JEANS</figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/half-star.svg" alt="Star Icon" />
+       <figcaption>3.5/<span>5</span></figcaption>
+      </figure>
 
+      <div class="price-category">
+       <p class="price">
+        $240
+        <span class="price__del"><del>$260</del></span>
+       </p>
+       <p class="price__sale">-20%</p>
+      </div>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img
+        src="./assets/img/shirt.svg"
+        alt="Shirt"
+        class="clothes-list__clothes"
+       />
+       <figcaption class="clothes-list__caption">CHECKERED SHIRT</figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/half-star.svg" alt="Star Icon" />
+       <figcaption>4.5/<span>5</span></figcaption>
+      </figure>
+      <p class="price">$180</p>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img src="./assets/img/sport-shirt.svg" alt="Sport Shirt" />
+       <figcaption class="clothes-list__caption">
+        SLEEVE STRIPED T-SHIRT
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/half-star.svg" alt="Star Icon" />
+       <figcaption>4.5/<span>5</span></figcaption>
+      </figure>
       <div class="price-category">
        <p class="price">
         $130
@@ -224,7 +355,7 @@
     <h2 class="sellings__title">TOP SELLINGS</h2>
     <section class="clothes-list">
      <article>
-      <figure>
+      <figure class="clothes">
        <img
         src="./assets/img/green-shirt.svg"
         alt="Tshirt"
@@ -262,14 +393,12 @@
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
        <figcaption>4.0/<span>5</span></figcaption>
       </figure>
-
       <p class="price">$145</p>
      </article>
      <article>
-      <figure>
+      <figure class="clothes">
        <img
         src="./assets/img/short.svg"
         alt="Short"
@@ -283,7 +412,6 @@
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
        <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
        <figcaption>3.0/<span>5</span></figcaption>
       </figure>
       <p class="price">$180</p>
@@ -301,13 +429,101 @@
        <img src="./assets/icons/half-star.svg" alt="Star Icon" />
        <figcaption>4.5/<span>5</span></figcaption>
       </figure>
-
       <p class="price">$210</p>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img
+        src="./assets/img/green-shirt.svg"
+        alt="Tshirt"
+        class="clothes-list__clothes"
+       />
+       <figcaption class="clothes-list__caption">
+        VERTICAL STRIPED SHIRT
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <figcaption>5.0/<span>5</span></figcaption>
+      </figure>
+      <div class="price-category">
+       <p class="price">
+        $212
+        <span class="price__del"><del>$232</del></span>
+       </p>
+       <p class="price__sale">-20%</p>
+      </div>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img src="./assets/img/oranges-shirt.svg" alt="Tshirt" />
+       <figcaption class="clothes-list__caption">
+        COURAGE GRAPHIC T-SHIRT
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <figcaption>4.0/<span>5</span></figcaption>
+      </figure>
+      <p class="price">$145</p>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img
+        src="./assets/img/green-shirt.svg"
+        alt="Tshirt"
+        class="clothes-list__clothes"
+       />
+       <figcaption class="clothes-list__caption">
+        VERTICAL STRIPED SHIRT
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <figcaption>5.0/<span>5</span></figcaption>
+      </figure>
+      <div class="price-category">
+       <p class="price">
+        $212
+        <span class="price__del"><del>$232</del></span>
+       </p>
+       <p class="price__sale">-20%</p>
+      </div>
+     </article>
+     <article>
+      <figure class="clothes">
+       <img
+        src="./assets/img/short.svg"
+        alt="Short"
+        class="clothes-list__clothes"
+       />
+       <figcaption class="clothes-list__caption">
+        LOOSE FIT BERMUDA SHORTS
+       </figcaption>
+      </figure>
+      <figure class="clothes-list__review">
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <img src="./assets/icons/Star.svg" alt="Star Icon" />
+       <figcaption>3.0/<span>5</span></figcaption>
+      </figure>
+      <p class="price">$180</p>
      </article>
     </section>
     <button class="view-btn">View All</button>
    </section>
-   <section class="dress-style">
+   <section class="dress-style" id="brands">
     <h2 class="title">BROWSE BY DRESS STYLE</h2>
     <article class="banners-wrapper">
      <figure class="clothes-banner casual">
@@ -324,33 +540,26 @@
      </figure>
     </article>
    </section>
+
    <section class="customers">
     <h2 class="customers__title">OUR HAPPY CUSTOMERS</h2>
-
     <div class="cards-container">
+     <!-- Card 1 -->
      <article class="card">
       <div class="desc">
        <div class="desc__info">
         <figure>
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
         </figure>
-
         <figure class="desc__name">
          <figcaption>Sarah M.</figcaption>
-
          <img src="./assets/icons/check.svg" alt="Check Icon" />
         </figure>
-
         <p class="desc__review">
          "I'm blown away by the quality and style of the clothes I received from
          Shop.co. From casual wear to elegant dresses, every piece I've bought
@@ -360,29 +569,22 @@
       </div>
      </article>
 
+     <!-- Card 2 -->
      <article class="card">
       <div class="desc">
        <div class="desc__info">
         <figure>
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
         </figure>
-
         <figure class="desc__name">
          <figcaption>Alex K.</figcaption>
-
          <img src="./assets/icons/check.svg" alt="Check Icon" />
         </figure>
-
         <p class="desc__review">
          "Finding clothes that align with my personal style used to be a
          challenge until I discovered Shop.co. The range of options they offer
@@ -392,33 +594,76 @@
       </div>
      </article>
 
+     <!-- Card 3 -->
      <article class="card">
       <div class="desc">
        <div class="desc__info">
         <figure>
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
         </figure>
-
         <figure class="desc__name">
          <figcaption>James L.</figcaption>
-
          <img src="./assets/icons/check.svg" alt="Check Icon" />
         </figure>
-
         <p class="desc__review">
          "As someone who's always on the lookout for unique fashion pieces, I'm
          thrilled to have stumbled upon Shop.co. The selection of clothes is not
          only diverse but also on-point with the latest trends.”
+        </p>
+       </div>
+      </div>
+     </article>
+
+     <!-- Card 4 -->
+     <article class="card">
+      <div class="desc">
+       <div class="desc__info">
+        <figure>
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+        </figure>
+        <figure class="desc__name">
+         <figcaption>David N.</figcaption>
+         <img src="./assets/icons/check.svg" alt="Check Icon" />
+        </figure>
+        <p class="desc__review">
+         "As a fan of unique fashion, I’m thrilled with Shop.co. Their selection
+         is incredibly diverse and perfectly aligns with the latest trends. It’s
+         the ideal place for anyone looking to stay ahead in style."
+        </p>
+       </div>
+      </div>
+     </article>
+
+     <!-- Card 5 -->
+     <article class="card">
+      <div class="desc">
+       <div class="desc__info">
+        <figure>
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+         <img src="./assets/icons/Star.svg" alt="Star Icon" />
+        </figure>
+        <figure class="desc__name">
+         <figcaption>Tom S.</figcaption>
+         <img src="./assets/icons/check.svg" alt="Check Icon" />
+        </figure>
+        <p class="desc__review">
+         "Shop.co is a fantastic find for trendy pieces. The clothing range is
+         on-point and offers something for every taste. I’m impressed by how
+         they consistently deliver fresh, modern styles that stand out."
         </p>
        </div>
       </div>
@@ -429,28 +674,20 @@
        <div class="desc__info">
         <figure>
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
-
          <img src="./assets/icons/Star.svg" alt="Star Icon" />
         </figure>
-
         <figure class="desc__name">
-         <figcaption>David N.</figcaption>
-
+         <figcaption>Rachel M.</figcaption>
          <img src="./assets/icons/check.svg" alt="Check Icon" />
         </figure>
-
         <p class="desc__review">
-         "As someone who's always on the lookout for unique fashion pieces, I'm
-         thrilled to have stumbled upon Shop.co. The selection of clothes is not
-         only diverse but also on-point with the latest trends.”
+         "I love the diverse collection at Shop.co. It’s hard to find a store
+         that stays so current with fashion trends while offering such unique
+         pieces. Truly a go-to destination for a modern, stylish wardrobe."
         </p>
        </div>
       </div>
