@@ -1,5 +1,29 @@
 @use "../abstracts/variables" as v;
 
+@font-face {
+    font-family: "FONTSPRING DEMO - Integral CF Bold";
+    src:
+        url("fontspring-demo-integral-cf-bold.woff2") format("woff2"),
+        url("fontspring-demo-integral-cf-bold.woff") format("woff"),
+        url("fontspring-demo-integral-cf-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Integral CF";
+    src:
+        url("/fonts/IntegralCF-Regular.woff2") format("woff2"),
+        url("/fonts/IntegralCF-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Integral CF", sans-serif;
+}
+
 html {
     // 1rem = 10px
     font-size: 62.5%;

@@ -9,10 +9,6 @@
    href="https://fonts.fontshare.com/css?f[]=satoshi&display=swap"
    rel="stylesheet"
   />
-  <link
-   rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
  </head>
  <body>
   <aside class="sign-form">
@@ -140,7 +136,9 @@
     <button class="hero__btn">Shop Now</button>
     <article class="stat">
      <div class="stat__item">
-      <p class="stat__title">200+</p>
+      <p class="stat__title">
+       <span class="counter" data-target="200">0</span>+
+      </p>
       <p class="stat__sub-title">International Brands</p>
      </div>
 
@@ -149,12 +147,16 @@
      </figure>
 
      <div class="stat__item">
-      <p class="stat__title">2,000+</p>
+      <p class="stat__title">
+       <span class="counter" data-target="2000">0</span>+
+      </p>
       <p class="stat__sub-title">High-Quality Products</p>
      </div>
 
      <div class="stat__item stat__item--bottom">
-      <p class="stat__title">30,000+</p>
+      <p class="stat__title">
+       <span class="counter" data-target="30000">0</span>+
+      </p>
       <p class="stat__sub-title">Happy Customers</p>
      </div>
     </article>
@@ -820,5 +822,6 @@
     </div>
    </div>
   </footer>
+  <script src="./main.js"></script>
  </body>
 </html>

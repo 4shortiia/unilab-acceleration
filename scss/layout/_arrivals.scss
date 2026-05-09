@@ -12,6 +12,7 @@
         margin-bottom: 3.2rem;
         font-size: map.get(v.$font-sizes, "title");
         font-weight: map.get(v.$font-weights, "bold");
+        font-family: "FONTSPRING DEMO - Integral CF Bold";
 
         @media (min-width: 1440px) {
             margin-top: 7.2rem;

@@ -14,6 +14,7 @@
         min-height: 9.3rem;
         margin-left: 1.6rem;
         padding-top: 4rem;
+        font-family: "FONTSPRING DEMO - Integral CF Bold";
 
         @media (min-width: 1440px) {
             margin-left: 10rem;
@@ -109,6 +110,13 @@
         color: v.$text-secondary;
         font-size: map.get(v.$font-sizes, "heading");
         font-weight: map.get(v.$font-weights, "bold");
+        font-family: "Integral CF", sans-serif;
+
+        span {
+            display: inline-block;
+            min-width: 1.5ch;
+            text-align: center;
+        }
     }
 
     &__sub-title {
@@ -192,6 +200,16 @@
         padding-top: 3.9rem;
         padding-bottom: 2.261rem;
         flex-wrap: wrap;
+        img {
+            transition: filter 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                filter: grayscale(20%) brightness(40%) sepia(100%)
+                    hue-rotate(50deg);
+            }
+        }
+
         img:nth-child(n + 6) {
             display: none;
         }
@@ -203,6 +221,7 @@
                 $align: center,
                 $gap: 3.4rem
             );
+            cursor: pointer;
             animation: scroll 20s linear infinite;
             padding: 4.4rem 0 0 6rem;
 

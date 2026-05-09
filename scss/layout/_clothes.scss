@@ -20,6 +20,7 @@
     font-size: map.get(v.$font-sizes, "title");
     font-weight: map.get(v.$font-weights, "bold");
     text-align: center;
+    font-family: "FONTSPRING DEMO - Integral CF Bold";
 
     @media (min-width: 1440px) {
         padding-top: 0;
