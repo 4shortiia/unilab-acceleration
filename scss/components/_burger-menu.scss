@@ -82,6 +82,8 @@
     transition: left 0.4s ease-in-out;
     padding: 8rem 2rem 4rem 2.5rem;
     @include m.flex($direction: column);
+
+    overflow-y: auto;
 }
 
 #nav-toggle:checked ~ .nav {

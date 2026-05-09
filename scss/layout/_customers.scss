@@ -21,35 +21,38 @@
         @media (min-width: 991px) {
             margin-bottom: 4rem;
         }
+    }
 
-        &::before {
-            position: absolute;
-            content: url("../assets/icons/arrow.svg");
-            top: 3.7rem;
-            left: 29rem;
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            display: inline-block;
-            pointer-events: auto;
+    &__header {
+        @include m.flex($justify: space-between, $align: center);
+    }
 
-            @media (min-width: 991px) {
-                left: 116rem;
-                top: 0;
-            }
+    &__arrows {
+        @include m.flex($gap: 2rem);
+        margin-top: 6rem;
+        padding-right: 0.5rem;
+        cursor: pointer;
+
+        @media (min-width: 991px) {
+            padding-bottom: 4rem;
         }
+    }
 
-        &::after {
-            position: absolute;
-            content: url("../assets/icons/arrow-right.svg");
-            margin-left: 13rem;
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            display: inline-block;
-            pointer-events: auto;
+    .arrow-left {
+        transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
+        &:hover {
+            transform: translateX(-5px) scale(1.05);
+        }
+    }
 
-            @media (min-width: 991px) {
-                left: 107rem;
-            }
+    .arrow-right {
+        transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
+        &:hover {
+            transform: translateX(5px) scale(1.1);
         }
     }
 }
