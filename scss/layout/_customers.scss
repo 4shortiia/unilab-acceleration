@@ -99,5 +99,9 @@
         font-weight: map.get(v.$font-weights, "regular");
         margin-top: 1.15rem;
         line-height: 2rem;
+
+        @media (min-width: 991px) {
+            line-height: 2.2rem;
+        }
     }
 }

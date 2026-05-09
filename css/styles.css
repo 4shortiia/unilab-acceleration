@@ -55,6 +55,13 @@ nav {
     font-size: clamp(1.2rem, 1.2rem + 0.4 * (100vw - 39rem) / 85, 1.6rem);
     margin-left: 4rem;
   }
+  nav .nav-list > li:not(:has(.shop-details)) {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  nav .nav-list > li:not(:has(.shop-details)):hover {
+    transform: scale(1.1);
+  }
   nav .nav-list a {
     color: #000000;
   }
@@ -87,7 +94,6 @@ nav {
     margin-bottom: 1rem;
   }
   nav .shop-details .dropdown-menu li a {
-    text-decoration: none;
     color: #000000;
   }
   nav .shop-details[open] .arrow {
@@ -101,6 +107,12 @@ nav {
     padding: 1.2rem 1.6rem;
     border-radius: 6.2rem;
     width: 57.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .search-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
   .search-container .search-icon {
     width: 2rem;
@@ -121,6 +133,17 @@ nav {
     color: rgba(0, 0, 0, 0.4);
   }
 }
+@media (min-width: 991px) {
+  .nav {
+    display: none;
+  }
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
 .hero {
   background-color: #f2f0f1;
   min-height: 85.3rem;
@@ -169,6 +192,14 @@ nav {
   width: 35.8rem;
   height: 5.2rem;
   margin: 2.4rem 1.6rem 2.2rem 1.6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hero__btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.09);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 1440px) {
   .hero__btn {
@@ -386,25 +417,28 @@ nav {
   }
 }
 
+@media (min-width: 1440px) {
+  .arrivals {
+    padding: 0 10rem;
+  }
+}
 .arrivals__title {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.arrivals {
   margin-top: 5rem;
-  font-size: clamp(2.4rem, 2.4rem + 0.8 * (100vw - 39rem) / 85, 3.2rem);
+  margin-bottom: 3.2rem;
+  font-size: clamp(3.2rem, 3.2rem + 1.6 * (100vw - 39rem) / 85, 4.8rem);
   font-weight: 700;
 }
 @media (min-width: 1440px) {
-  .arrivals {
+  .arrivals__title {
     margin-top: 7.2rem;
-    font-size: 4.8rem;
+    margin-bottom: 3.2rem;
   }
 }
 
 .clothes-list {
-  margin-top: 3.2rem;
   margin-left: 1.6rem;
   margin-right: 1.6rem;
   display: flex;
@@ -431,10 +465,10 @@ nav {
 .clothes-list__caption {
   font-size: clamp(1.2rem, 1.2rem + 0.4 * (100vw - 39rem) / 85, 1.6rem);
   font-weight: 700;
+  margin-top: 1rem;
 }
 @media (min-width: 1440px) {
   .clothes-list__caption {
-    font-size: 2rem;
     margin-top: 1.6rem;
   }
 }
@@ -461,6 +495,16 @@ nav {
   width: 29.5rem;
   height: 29.8rem;
   border-radius: 2rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.clothes img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.clothes img:active {
+  transform: translateY(-2px) scale(0.99);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .price-category {
@@ -469,6 +513,8 @@ nav {
 
 .price {
   margin-top: 0.425rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 @media (min-width: 1440px) {
   .price {
@@ -489,7 +535,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem;
-  margin-top: 0.9rem;
+  margin-top: 0.7rem;
 }
 @media (min-width: 1440px) {
   .price__sale {
@@ -510,6 +556,13 @@ nav {
   margin-left: 1.6rem;
   display: block;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.view-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.09);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 1440px) {
   .view-btn {
@@ -534,11 +587,16 @@ nav {
   .line {
     min-height: 0.1rem;
     width: 124rem;
-    margin: 6.4rem 10rem 0 10rem;
   }
 }
 
+@media (min-width: 1440px) {
+  .sellings {
+    padding: 0 10rem;
+  }
+}
 .sellings__title {
+  margin-bottom: 3.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -551,14 +609,44 @@ nav {
 }
 .sellings {
   margin-top: 5rem;
-  font-size: clamp(2.4rem, 2.4rem + 0.8 * (100vw - 39rem) / 85, 3.2rem);
+  font-size: clamp(2rem, 2rem + 0.4 * (100vw - 39rem) / 85, 2.4rem);
   font-weight: 700;
+}
+
+.sales {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ff3333;
+  background-color: rgba(255, 51, 51, 0.1019607843);
+  border-radius: 6.2rem;
+  width: 4.2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-top: 0.7rem;
+}
+@media (min-width: 1440px) {
+  .sales {
+    width: 5.8rem;
+    height: 2.8rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
 }
 
 .dress-style {
   margin: 6.35rem 1.6rem 0 1.6rem;
   border-radius: 2rem;
   background-color: #f0f0f0;
+}
+@media (min-width: 1440px) {
+  .dress-style {
+    margin: 7rem 10rem 0 10rem;
+    padding: 7rem 6.4rem;
+    border-radius: 4rem;
+  }
 }
 
 .title {
@@ -568,10 +656,53 @@ nav {
   font-weight: 700;
   text-align: center;
 }
+@media (min-width: 1440px) {
+  .title {
+    padding-top: 0;
+    font-size: 4.8rem;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.banners-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-bottom: 2.8rem;
+}
+@media (min-width: 1440px) {
+  .banners-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 29rem;
+    gap: 2rem;
+  }
+}
 
 .clothes-banner {
   position: relative;
   overflow: hidden;
+  width: 31rem;
+  height: 19rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.clothes-banner:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.clothes-banner:active {
+  transform: translateY(-2px) scale(0.99);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1440px) {
+  .clothes-banner {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
 }
 .clothes-banner img {
   display: block;
@@ -579,7 +710,13 @@ nav {
   height: 19rem;
   border-radius: 2rem;
   margin: 0 auto;
-  margin-bottom: 2.8rem;
+}
+@media (min-width: 1440px) {
+  .clothes-banner img {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+  }
 }
 .clothes-banner::before {
   position: absolute;
@@ -588,6 +725,27 @@ nav {
   left: 4.8rem;
   top: 2.4rem;
   z-index: 10;
+}
+@media (min-width: 1440px) {
+  .clothes-banner::before {
+    left: 3.6rem;
+    top: 2.5rem;
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 1440px) {
+  .clothes-banner.casual {
+    grid-column: 1/2;
+  }
+  .clothes-banner.formal {
+    grid-column: 2/4;
+  }
+  .clothes-banner.vintage {
+    grid-column: 1/3;
+  }
+  .clothes-banner.sport {
+    grid-column: 3/4;
+  }
 }
 .clothes-banner.casual::before {
   content: "Casual";
@@ -610,6 +768,12 @@ nav {
   margin: 0 1.6rem 5rem 1.6rem;
   position: relative;
 }
+@media (min-width: 991px) {
+  .customers {
+    padding: 0 9rem;
+    margin-top: 8rem;
+  }
+}
 .customers__title {
   margin: 5rem 0 2.4rem 0;
   font-size: clamp(3.2rem, 3.2rem + 1.6 * (100vw - 39rem) / 85, 4.8rem);
@@ -617,23 +781,55 @@ nav {
   text-align: left;
   position: relative;
 }
+@media (min-width: 991px) {
+  .customers__title {
+    margin-bottom: 4rem;
+  }
+}
 .customers__title::before {
   position: absolute;
   content: url(/assets/icons/arrow.svg);
   top: 3.7rem;
   left: 29rem;
   transition: transform 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+  pointer-events: auto;
+}
+@media (min-width: 991px) {
+  .customers__title::before {
+    left: 116rem;
+    top: 0;
+  }
 }
 .customers__title::after {
   position: absolute;
   content: url(/assets/icons/arrow-right.svg);
   margin-left: 13rem;
   transition: transform 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+  pointer-events: auto;
+}
+@media (min-width: 991px) {
+  .customers__title::after {
+    left: 107rem;
+  }
 }
 
 .card {
+  cursor: pointer;
   width: 35.8rem;
   flex-shrink: 0;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+  border-radius: 2rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .cards-container {
@@ -649,10 +845,13 @@ nav {
 }
 
 .desc {
-  border: 0.1rem solid rgba(0, 0, 0, 0.1019607843);
-  border-radius: 2rem;
   min-height: 21rem;
   padding: 2.4rem;
+}
+@media (min-width: 991px) {
+  .desc {
+    min-height: 24rem;
+  }
 }
 .desc__name {
   display: flex;
@@ -668,6 +867,112 @@ nav {
   margin-top: 1.15rem;
   line-height: 2rem;
 }
+@media (min-width: 991px) {
+  .desc__review {
+    line-height: 2.2rem;
+  }
+}
+
+.subscribe {
+  background-color: #000000;
+  margin: 0 1.6rem;
+  border-radius: 2rem;
+}
+@media (min-width: 991px) {
+  .subscribe {
+    margin: 0 10rem;
+    height: 18rem;
+  }
+}
+.subscribe__title {
+  color: #ffffff;
+  font-size: clamp(3.2rem, 3.2rem + 1.6 * (100vw - 39rem) / 85, 4.8rem);
+  padding: 3.2rem 2.4rem;
+  line-height: 3.5rem;
+  text-align: left;
+}
+@media (min-width: 991px) {
+  .subscribe__title {
+    padding: 4.3rem 0 4.3rem 6.4rem;
+    line-height: 5rem;
+    font-size: 4rem;
+    max-width: 60rem;
+  }
+}
+.subscribe__btn {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.8rem;
+  margin: 0 2.4rem;
+}
+@media (min-width: 991px) {
+  .subscribe__btn {
+    margin: 4.3rem 6.4rem 4.3rem 0;
+  }
+}
+.subscribe__btn button {
+  border: none;
+  margin-bottom: 1.2rem;
+  background-color: #ffffff;
+  max-width: 31.1rem;
+  height: 4.2rem;
+  border-radius: 6.2rem;
+  font-size: clamp(1.4rem, 1.4rem + 0.4 * (100vw - 39rem) / 85, 1.8rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.subscribe__btn button:hover {
+  transform: scale(1.09);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 991px) {
+  .subscribe__btn button {
+    width: 34.9rem;
+    height: 4.8rem;
+    font-size: 1.6rem;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.356rem;
+  margin-left: 1.6rem;
+}
+.btn-wrapper__desc {
+  outline: none;
+  width: 20rem;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: clamp(1.4rem, 1.4rem + 0.4 * (100vw - 39rem) / 85, 1.8rem);
+  line-height: 1rem;
+  font-weight: 400;
+}
+@media (min-width: 991px) {
+  .btn-wrapper__desc {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 991px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 21.2rem;
+  }
+}
+.submit-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.09);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 
 .sign-form {
   background-color: #000000;
@@ -676,10 +981,28 @@ nav {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 991px) {
+  .sign-form {
+    min-height: 3.8rem;
+  }
+}
 .sign-form__text {
   color: #ffffff;
   font-weight: 400;
   font-size: clamp(1.2rem, 1.2rem + 0.4 * (100vw - 39rem) / 85, 1.6rem);
+  opacity: 0.8;
+  position: relative;
+}
+@media (min-width: 991px) {
+  .sign-form__text {
+    font-size: clamp(1.6rem, 1.6rem + 0.4 * (100vw - 39rem) / 85, 2rem);
+  }
+  .sign-form__text::after {
+    content: "";
+    background-image: url(/assets/icons/exit.svg);
+    position: absolute;
+    z-index: 9;
+  }
 }
 
 .header__burger-menu {
@@ -698,14 +1021,20 @@ nav {
   .header__burger-menu img:nth-child(2) {
     width: 16rem;
     height: 2.2rem;
+    z-index: 0;
   }
 }
 .header__right-panel {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 1.2rem;
   margin-right: 2rem;
   cursor: pointer;
+}
+@media (min-width: 991px) {
+  .header__right-panel {
+    gap: 4rem;
+  }
 }
 .header__right-wrapper {
   display: flex;
@@ -716,11 +1045,154 @@ nav {
   .header__right-wrapper img:nth-child(1) {
     width: 2.213rem;
     height: 2.025rem;
+    transition: all 0.3s ease;
+  }
+  .header__right-wrapper img:nth-child(1):hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
   .header__right-wrapper img:nth-child(2) {
     width: 2.25rem;
     height: 2.25rem;
+    transition: all 0.3s ease;
   }
+  .header__right-wrapper img:nth-child(2):hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.logo-icon {
+  transition: all 0.3s ease;
+}
+.logo-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999999;
+  transition: left 0.4s ease-in-out;
+  padding: 8rem 2rem 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-toggle:checked ~ .nav {
+  left: 0;
+}
+
+#nav-toggle:checked ~ .nav-burger .close-icon {
+  display: block;
+  position: fixed;
+  top: 2.2rem;
+  left: 2.2rem;
+  z-index: 1000000;
+  width: 2.2rem;
+}
+
+#nav-toggle:checked ~ .signup-btn {
+  display: block;
+  z-index: 99;
+}
+
+#nav-toggle:checked ~ .nav-burger .burger-menu {
+  visibility: hidden;
+}
+
+.nav__burger-menu li {
+  margin-bottom: 3rem;
+}
+
+.nav-link,
+.details summary {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #8d8d8d;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.nav-link:hover,
+.details summary:hover {
+  color: #5a5a5a;
+  padding-left: 0.5rem;
+}
+.nav-link:active,
+.details summary:active {
+  color: rgb(166.5, 166.5, 166.5);
+}
+.nav-link:focus,
+.details summary:focus {
+  outline: none;
+  color: rgb(64.5, 64.5, 64.5);
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+}
+.dropdown-menu li a {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.dropdown-menu li a:hover {
+  color: #000000;
+  padding-left: 0.5rem;
+}
+.dropdown-menu li a:active {
+  color: rgba(0, 0, 0, 0.8);
+  transform: scale(0.98);
+}
+
+.arrow {
+  width: 1.4rem;
+  transition: 0.3s;
+}
+
+.shop-details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.signup-btn {
+  display: block;
+  width: 16.5rem;
+  height: 5.2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+.signup-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.close-icon {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
