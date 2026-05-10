@@ -395,12 +395,6 @@ nav {
   padding-top: 3rem;
   flex-wrap: wrap;
 }
-@media (min-width: 1440px) {
-  .brands__logos {
-    display: flex;
-    gap: 10.6rem;
-  }
-}
 .brands__logos img {
   transition: filter 0.3s ease;
   cursor: pointer;
@@ -442,6 +436,12 @@ nav {
   }
 }
 
+@media (min-width: 991px) {
+  .brands__logos {
+    display: flex;
+    gap: 10.6rem;
+  }
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -954,6 +954,11 @@ nav {
   will-change: transform;
   border-radius: 2rem;
 }
+@media (min-width: 991px) {
+  .card {
+    width: 40rem;
+  }
+}
 .card:hover {
   transform: translateY(-5px);
   border-color: rgba(0, 0, 0, 0.2);
@@ -1414,6 +1419,8 @@ nav {
 
 .burger-menu {
   cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 #nav-toggle:checked ~ .nav {
@@ -1422,6 +1429,7 @@ nav {
 
 #nav-toggle:checked ~ .header__burger-menu .nav-burger .close-icon {
   opacity: 1;
+  display: inline-block;
   visibility: visible;
   pointer-events: auto;
   position: fixed;
@@ -1438,6 +1446,10 @@ nav {
 
 #nav-toggle:checked ~ .header .nav-burger .burger-menu {
   visibility: hidden;
+}
+
+.nav-burger {
+  height: 2.4rem;
 }
 
 .nav__burger-menu li {
@@ -1495,7 +1507,7 @@ nav {
   transition: 0.3s;
 }
 
-.shop-details[open] .arrow {
+.details[open] .arrow {
   transform: rotate(180deg);
 }
 
@@ -1523,6 +1535,7 @@ nav {
 .close-icon {
   cursor: pointer;
   opacity: 0;
+  display: none;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.2s ease;
