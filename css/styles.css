@@ -375,6 +375,7 @@ nav {
   background-color: #000000;
   min-height: 14.6rem;
   overflow: hidden;
+  transform: translateY(-1px);
 }
 @media (min-width: 1440px) {
   .brands {

@@ -193,6 +193,7 @@
     background-color: v.$bg-primary;
     min-height: 14.6rem;
     overflow: hidden;
+    transform: translateY(-1px);
 
     @media (min-width: 1440px) {
         grid-column: 1 / 3;
