@@ -208,7 +208,9 @@
         @include m.flex($justify: center, $align: center, $gap: 3.4rem);
         padding-top: 3rem;
         flex-wrap: wrap;
-
+        @media (min-width: 1440px) {
+            @include m.flex($gap: 10.6rem);
+        }
         img {
             transition: filter 0.3s ease;
             cursor: pointer;
