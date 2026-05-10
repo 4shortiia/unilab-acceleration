@@ -138,6 +138,7 @@
     display: block;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    font-size: map.get(v.$font-sizes, "body-sm");
     &:hover {
         background-color: v.$bg-primary;
         color: v.$text-primary;
@@ -151,7 +152,6 @@
         width: 21.8rem;
         height: 5.2rem;
         margin-top: 3.6rem;
-        font-size: map.get(v.$font-sizes, "body-sm");
     }
 }
 
