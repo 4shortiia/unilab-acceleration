@@ -92,6 +92,8 @@
 }
 .burger-menu {
     cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
 }
 
 #nav-toggle:checked ~ .nav {
@@ -100,6 +102,7 @@
 
 #nav-toggle:checked ~ .header__burger-menu .nav-burger .close-icon {
     opacity: 1;
+    display: inline-block;
     visibility: visible;
     pointer-events: auto;
     position: fixed;
@@ -116,6 +119,10 @@
 
 #nav-toggle:checked ~ .header .nav-burger .burger-menu {
     visibility: hidden;
+}
+
+.nav-burger {
+    height: 2.4rem;
 }
 
 .nav__burger-menu li {
@@ -203,6 +210,7 @@
 .close-icon {
     cursor: pointer;
     opacity: 0;
+    display: none;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.2s ease;
