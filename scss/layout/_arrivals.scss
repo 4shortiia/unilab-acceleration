@@ -131,10 +131,11 @@
     border: 0.1rem solid v.$bg-btn;
     background-color: v.$bg-secondary;
     border-radius: 6.2rem;
-    width: 35.8rem;
+    width: calc(100% - 3.2rem);
+    max-width: 35.8rem;
+
     height: 4.6rem;
-    margin-top: 2.4rem;
-    margin-left: 1.6rem;
+    margin: 2.4rem auto 0 auto;
     display: block;
     cursor: pointer;
     transition: 0.3s ease-in-out;

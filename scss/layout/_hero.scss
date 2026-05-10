@@ -55,7 +55,8 @@
         background-color: v.$bg-primary;
         color: v.$text-primary;
         border-radius: 6.2rem;
-        width: 35.8rem;
+        max-width: 35.8rem;
+        width: calc(100% - 3.2rem);
         height: 5.2rem;
         margin: 2.4rem 1.6rem 2.2rem 1.6rem;
         transition: 0.3s ease-in-out;
@@ -208,6 +209,7 @@
         padding-top: 3.9rem;
         padding-bottom: 2.261rem;
         flex-wrap: wrap;
+
         img {
             transition: filter 0.3s ease;
             cursor: pointer;
