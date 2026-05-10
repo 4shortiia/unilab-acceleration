@@ -205,8 +205,7 @@
 
     &__logos {
         @include m.flex($justify: center, $align: center, $gap: 3.4rem);
-        padding-top: 3.9rem;
-        padding-bottom: 2.261rem;
+        padding-top: 3rem;
         flex-wrap: wrap;
 
         img {
