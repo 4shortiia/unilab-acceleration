@@ -7,6 +7,9 @@
 .hero {
     background-color: v.$bg-hero;
     min-height: 85.3rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
     &__title {
         color: v.$text-secondary;
@@ -134,7 +137,8 @@
     overflow: hidden;
 
     img {
-        width: 39rem;
+        width: 100%;
+        max-width: 39rem;
         object-fit: contain;
         min-height: 44.8rem;
         display: block;
@@ -188,6 +192,7 @@
 .brands {
     background-color: v.$bg-primary;
     min-height: 14.6rem;
+    overflow: hidden;
 
     @media (min-width: 1440px) {
         grid-column: 1 / 3;
@@ -253,8 +258,6 @@
 }
 
 .hero {
-    position: relative;
-
     @media (min-width: 1440px) {
         background-color: v.$bg-hero;
         min-height: 66.3rem;
@@ -272,6 +275,11 @@
             grid-column: 2 / 3;
             grid-row: 1 / 5;
             position: relative;
+        }
+
+        .hero-banner img,
+        .banner-desktop img {
+            height: auto;
         }
     }
 }
