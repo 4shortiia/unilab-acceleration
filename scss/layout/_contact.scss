@@ -102,6 +102,7 @@
 .submit-btn {
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    color: v.$text-secondary;
 
     &:hover {
         background-color: v.$bg-primary;

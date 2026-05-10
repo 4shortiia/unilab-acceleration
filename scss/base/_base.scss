@@ -2,10 +2,12 @@
 @use "../abstracts/variables" as v;
 @use "sass:map";
 @use "sass:color";
+@use "sass:list";
 
 html {
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,4 +17,6 @@ body {
     overflow-y: auto;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
